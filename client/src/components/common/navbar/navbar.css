@@ -1,0 +1,725 @@
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+
+  background-color: #ffffff;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ========================================
+   TOP HEADER
+======================================== */
+
+.navbar-top {
+  width: 100%;
+  max-width: 1400px;
+
+  height: 82px;
+
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  min-width: 250px;
+
+  text-decoration: none;
+}
+
+.logo-icon {
+  font-size: 38px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-text span {
+  color: #087dcc;
+
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.logo-text small {
+  margin-top: 2px;
+
+  color: #4d89b9;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+
+/* ========================================
+   SEARCH
+======================================== */
+
+.search-box {
+  display: flex;
+  align-items: center;
+
+  flex: 1;
+
+  max-width: 560px;
+
+  height: 40px;
+
+  border: 1px solid #d8e2ec;
+
+  border-radius: 7px;
+
+  overflow: hidden;
+
+  background-color: #ffffff;
+}
+
+.search-box input {
+  flex: 1;
+
+  width: 100%;
+
+  height: 100%;
+
+  padding: 0 15px;
+
+  border: none;
+  outline: none;
+
+  font-size: 14px;
+
+  color: #333333;
+}
+
+.search-box input::placeholder {
+  color: #8a98a8;
+}
+
+.search-button {
+  width: 55px;
+  height: 100%;
+
+  border: none;
+
+  background-color: #ffffff;
+
+  cursor: pointer;
+
+  font-size: 18px;
+}
+
+.search-button:hover {
+  background-color: #f3f8fc;
+}
+
+
+/* ========================================
+   HOTLINE
+======================================== */
+
+.hotline {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  white-space: nowrap;
+}
+
+.hotline-icon {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background-color: #087dcc;
+
+  color: #ffffff;
+
+  font-size: 18px;
+}
+
+.hotline-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.hotline-info span {
+  font-size: 12px;
+
+  color: #667788;
+}
+
+.hotline-info strong {
+  font-size: 15px;
+
+  color: #086abd;
+}
+
+
+/* ========================================
+   ACCOUNT + CART
+======================================== */
+
+.navbar-action {
+  position: relative;
+}
+
+.action-button {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 8px 4px;
+
+  border: none;
+
+  background-color: transparent;
+
+  color: #273746;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+.action-button:hover {
+  color: #087dcc;
+}
+
+.action-icon {
+  font-size: 25px;
+}
+
+.action-text {
+  font-size: 14px;
+}
+
+.arrow {
+  font-size: 14px;
+}
+
+.cart-count {
+  position: absolute;
+
+  top: -2px;
+  left: 17px;
+
+  min-width: 19px;
+  height: 19px;
+
+  padding: 0 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background-color: #087dcc;
+
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+/* ========================================
+   GENERAL DROPDOWN
+======================================== */
+
+.dropdown {
+  position: absolute;
+
+  top: calc(100% + 14px);
+  right: 0;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e1e8ef;
+
+  border-radius: 8px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+  z-index: 2000;
+}
+
+/* Vùng đệm tàng hình để chuột di chuyển xuống dropdown không bị ngắt hover */
+.dropdown::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 0;
+  width: 100%;
+  height: 14px;
+}
+
+
+/* ========================================
+   ACCOUNT DROPDOWN
+======================================== */
+
+.account-dropdown {
+  width: 230px;
+
+  padding: 10px;
+}
+
+.account-dropdown a,
+.account-dropdown button {
+  display: block;
+
+  width: 100%;
+
+  padding: 11px 12px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background-color: transparent;
+
+  text-align: left;
+
+  text-decoration: none;
+
+  color: #34495e;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.account-dropdown a:hover,
+.account-dropdown button:hover {
+  background-color: #edf6ff;
+
+  color: #087dcc;
+}
+
+.account-dropdown hr {
+  margin: 7px 0;
+
+  border: none;
+
+  border-top: 1px solid #edf0f3;
+}
+
+
+/* ========================================
+   CART DROPDOWN
+======================================== */
+
+.cart-dropdown {
+  width: 380px;
+
+  padding: 18px;
+}
+
+.cart-dropdown h4 {
+  margin: 0 0 15px;
+
+  color: #087dcc;
+
+  font-size: 15px;
+}
+
+
+/* Cart Item */
+
+.cart-item {
+  position: relative;
+
+  display: flex;
+
+  gap: 12px;
+
+  padding: 12px 0;
+
+  border-bottom: 1px solid #edf0f3;
+}
+
+.cart-image {
+  width: 60px;
+  height: 60px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  background-color: #f5f8fb;
+
+  font-size: 28px;
+}
+
+.cart-info {
+  flex: 1;
+}
+
+.cart-info strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #273746;
+
+  font-size: 13px;
+}
+
+.cart-info > span {
+  display: block;
+
+  color: #087dcc;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* Quantity */
+
+.quantity {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 8px;
+}
+
+.quantity button {
+  width: 23px;
+  height: 23px;
+
+  border: 1px solid #d8e0e8;
+
+  border-radius: 4px;
+
+  background-color: #ffffff;
+
+  cursor: pointer;
+}
+
+.quantity button:hover {
+  border-color: #087dcc;
+
+  color: #087dcc;
+}
+
+.quantity span {
+  min-width: 15px;
+
+  text-align: center;
+
+  font-size: 13px;
+}
+
+
+/* Remove */
+
+.remove-cart-item {
+  align-self: center;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  font-size: 13px;
+}
+
+
+/* Cart Total */
+
+.cart-total {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 18px 0;
+
+  font-size: 14px;
+}
+
+.cart-total strong {
+  color: #087dcc;
+
+  font-size: 15px;
+}
+
+
+/* View Cart */
+
+.view-cart-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  padding: 11px;
+
+  border-radius: 5px;
+
+  background-color: #087dcc;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.view-cart-button:hover {
+  background-color: #056caf;
+}
+
+
+/* ========================================
+   NAVIGATION MENU
+======================================== */
+
+.navbar-bottom{
+    width: 100%;
+    background-color: #087dcc;
+}
+
+.navbar-menu {
+  width: 100%;
+  max-width: 1400px;
+
+  height: 46px;
+
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* Navigation Link */
+
+.nav-link {
+  height: 100%;
+
+  padding: 0 26px;
+
+  display: flex;
+  align-items: center;
+
+  border: none;
+
+  background-color: transparent;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.18);
+
+  border-radius: 6px 6px 0 0;
+}
+
+
+/* ========================================
+   PRODUCT MENU
+======================================== */
+
+.nav-product {
+  position: relative;
+
+  height: 100%;
+}
+
+.product-button {
+  gap: 8px;
+}
+
+.product-dropdown {
+  position: absolute;
+
+  top: 46px;
+  left: 0;
+
+  width: 230px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #dfe7ef;
+
+  border-radius: 0 0 7px 7px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+  overflow: hidden;
+
+  z-index: 2000;
+}
+
+.product-dropdown a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 16px;
+
+  color: #34495e;
+
+  text-decoration: none;
+
+  font-size: 14px;
+}
+
+.product-dropdown a:hover {
+  background-color: #edf6ff;
+
+  color: #087dcc;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1100px) {
+  .navbar-top {
+    gap: 15px;
+  }
+
+  .navbar-logo {
+    min-width: 200px;
+  }
+
+  .hotline {
+    display: none;
+  }
+
+  .nav-link {
+    padding: 0 18px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .navbar-top {
+    height: 65px;
+
+    padding: 0 15px;
+  }
+
+  .navbar-logo {
+    min-width: auto;
+  }
+
+  .logo-icon {
+    font-size: 28px;
+  }
+
+  .logo-text span {
+    font-size: 17px;
+  }
+
+  .logo-text small {
+    font-size: 9px;
+  }
+
+  .search-box {
+    max-width: none;
+  }
+
+  .action-text {
+    display: none;
+  }
+
+  .navbar-menu {
+    overflow-x: auto;
+  }
+
+  .nav-link {
+    padding: 0 15px;
+
+    white-space: nowrap;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .search-box {
+    display: none;
+  }
+
+  .navbar-top {
+    justify-content: space-between;
+  }
+
+  .cart-dropdown {
+    position: fixed;
+
+    top: 65px;
+    right: 10px;
+    left: 10px;
+
+    width: auto;
+  }
+
+  .account-dropdown {
+    position: fixed;
+
+    top: 65px;
+    right: 10px;
+  }
+}
