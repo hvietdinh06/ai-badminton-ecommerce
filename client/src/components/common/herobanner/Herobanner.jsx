@@ -17,18 +17,37 @@ function HeroBanner() {
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         loop={true}
+        speed={600}
         className="hero-swiper"
       >
         <SwiperSlide>
-          <img src={banner1} alt="Banner 1" className="hero-image" />
+          <img
+            src={banner1}
+            alt="Banner 1"
+            className="hero-image"
+            width="1940"
+            height="640"
+          />
         </SwiperSlide>
 
         <SwiperSlide>
-          <img src={banner2} alt="Banner 2" className="hero-image" />
+          <img
+            src={banner2}
+            alt="Banner 2"
+            className="hero-image"
+            width="1940"
+            height="640"
+          />
         </SwiperSlide>
 
         <SwiperSlide>
-          <img src={banner3} alt="Banner 3" className="hero-image" />
+          <img
+            src={banner3}
+            alt="Banner 3"
+            className="hero-image"
+            width="1940"
+            height="640"
+          />
         </SwiperSlide>
       </Swiper>
     </section>

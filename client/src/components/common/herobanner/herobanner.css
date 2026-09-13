@@ -1,28 +1,26 @@
 /* ========================================
-   HERO BANNER
+   HERO BANNER (FULL WIDTH)
 ======================================== */
 
 .hero-banner {
   width: 100%;
-  max-width: 1400px;
-  margin: 16px auto;
-  padding: 0 24px;
+  margin: 0;
+  padding: 0;
 }
 
 .hero-swiper {
   position: relative;
   width: 100%;
-  aspect-ratio: 2.6 / 1;
-  max-height: 520px;
-  border-radius: 12px;
+  aspect-ratio: 1940 / 640;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .hero-swiper .swiper-slide {
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-swiper .swiper-slide img,
@@ -37,7 +35,7 @@
 /* Swiper Pagination (Dots) */
 
 .hero-swiper .swiper-pagination {
-  bottom: 14px !important;
+  bottom: 18px !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,7 +59,7 @@
 }
 
 .hero-swiper .swiper-pagination-bullet-active {
-  width: 26px;
+  width: 28px;
   border-radius: 5px;
   opacity: 1;
   background-color: #087dcc;
@@ -70,14 +68,8 @@
 /* Responsive */
 
 @media (max-width: 768px) {
-  .hero-banner {
-    padding: 0 12px;
-    margin: 10px auto;
-  }
-
   .hero-swiper {
-    aspect-ratio: 2.2 / 1;
-    border-radius: 8px;
+    min-height: 160px;
   }
 
   .hero-swiper .swiper-pagination {
