@@ -9,7 +9,7 @@
   padding: 0 24px;
 }
 
-.hero-slider {
+.hero-swiper {
   position: relative;
   width: 100%;
   aspect-ratio: 2.6 / 1;
@@ -19,6 +19,13 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
+.hero-swiper .swiper-slide {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-swiper .swiper-slide img,
 .hero-image {
   width: 100%;
   height: 100%;
@@ -27,36 +34,34 @@
   display: block;
 }
 
-/* Dots */
+/* Swiper Pagination (Dots) */
 
-.hero-dots {
-  position: absolute;
-  bottom: 14px;
-  left: 50%;
-  transform: translateX(-50%);
+.hero-swiper .swiper-pagination {
+  bottom: 14px !important;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 8px;
   z-index: 10;
 }
 
-.hero-dot {
+.hero-swiper .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  border: none;
+  margin: 0 !important;
   border-radius: 50%;
   background-color: #ffffff;
-  opacity: 0.5;
+  opacity: 0.6;
   cursor: pointer;
-  padding: 0;
   transition: all 0.3s ease;
 }
 
-.hero-dot:hover {
-  opacity: 0.8;
+.hero-swiper .swiper-pagination-bullet:hover {
+  opacity: 0.9;
 }
 
-.hero-dot.active {
-  width: 24px;
+.hero-swiper .swiper-pagination-bullet-active {
+  width: 26px;
   border-radius: 5px;
   opacity: 1;
   background-color: #087dcc;
@@ -70,8 +75,22 @@
     margin: 10px auto;
   }
 
-  .hero-slider {
+  .hero-swiper {
     aspect-ratio: 2.2 / 1;
     border-radius: 8px;
+  }
+
+  .hero-swiper .swiper-pagination {
+    bottom: 8px !important;
+    gap: 6px;
+  }
+
+  .hero-swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
+
+  .hero-swiper .swiper-pagination-bullet-active {
+    width: 20px;
   }
 }
